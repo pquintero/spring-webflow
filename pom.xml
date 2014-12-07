@@ -20,6 +20,8 @@
 			<name>Mike Baranski</name>
 			<id>mikeski</id>
 			<email>mike.baranski at gmail.com</email>
+			<url>http://mikeski.net</url>
+			<timezone>-5</timezone>
 		</developer>
 	</developers>
 
