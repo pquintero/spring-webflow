@@ -43,19 +43,20 @@
   <!--Define FlowHandlerMapping to tell DispatcherServlet (in web.xml)
       to send flow requests to Spring Web Flow -->
   <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
-    <property name="flowRegistry" ref="loginFlowRegistry" />
+    <property name="flowRegistry" ref="guessFlowRegistry" />
   </bean>
 
   <!-- Define FlowHandlerAdapter to handle Spring Web Flow request call.
        This is the Controller class in Spring Web Flow -->
   <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
-    <property name="flowExecutor" ref="loginFlowExecutor" />
+    <property name="flowExecutor" ref="guessFlowExecutor" />
   </bean>
+
   <!-- Define the flow executor responsible for executing login web flow -->
-  <flow:flow-executor id="loginFlowExecutor" flow-registry="loginFlowRegistry"/>
+  <flow:flow-executor id="guessFlowExecutor" flow-registry="guessFlowRegistry"/>
 
   <!-- Define the registry that holds references to all the flow related XML configuration-->
-  <flow:flow-registry id="loginFlowRegistry">
+  <flow:flow-registry id="guessFlowRegistry">
     <flow:flow-location id="guessFlow" path="/WEB-INF/flows/guess-flow.xml"/>
   </flow:flow-registry>
 
